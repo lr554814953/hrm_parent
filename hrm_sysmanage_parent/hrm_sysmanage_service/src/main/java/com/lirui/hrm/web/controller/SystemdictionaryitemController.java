@@ -17,6 +17,14 @@ public class SystemdictionaryitemController {
     @Autowired
     public ISystemdictionaryitemService systemdictionaryitemService;
 
+
+//    sn	courseLevel   前台通过数据字典类型的编号查询数据字典明细
+    @RequestMapping(value = "/listSn",method = RequestMethod.GET)
+    public List<Systemdictionaryitem> listByParentSn(String sn){
+
+        return systemdictionaryitemService.listByParentSn(sn);
+    }
+
     /**
     * 保存和修改公用的
     * @param systemdictionaryitem  传递的实体

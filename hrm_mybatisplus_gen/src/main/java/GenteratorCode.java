@@ -40,7 +40,8 @@ public class GenteratorCode {
         StrategyConfig strategy = new StrategyConfig();
         strategy.setTablePrefix(new String[] { "t_" });// 此处可以修改为您的表前缀
         strategy.setNaming(NamingStrategy.underline_to_camel);// 表名生成策略
-        strategy.setInclude(new String[]{"t_systemdictionary","t_systemdictionaryitem"}); // 需要生成的表
+        strategy.setInclude(new String[]{"t_department", "t_employee","t_meal","t_menu",
+                "t_permission","t_role","t_tenant","t_tenant_type"}); // 需要生成的表
         mpg.setStrategy(strategy);
         // 包配置
         PackageConfig pc = new PackageConfig();
